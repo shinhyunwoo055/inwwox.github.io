@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="slick-theme.css">
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    </head>
+    <script>
+        $(function(){
+            $('.design-box').click(function(e){
+            e.preventDefault();
+            $('.pop').fadeIn();
+            });
+            $('.close').click(function(e){
+            e.preventDefault();
+             $('.pop').fadeOut();
+            });
+            $('.itembox').slick({
+             slidesToShow: 1,
+             slidesToScroll: 1,
+             autoplay: false,
+             autoplaySpeed: 2000,
+            });
+            AOS.init();
+        })
+    </script>
+
+<body>
+    <nav>
+        <ul class="gnb">
+         <li class="lnb">
+             <a href="/portfolio.html">Home</a></li>
+         <li class="lnb">
+             <a href="/portfolio.html">About</a></li>
+             <li class="lnb" onclick="pageable.scrollToPage(3)">
+                 <a href="/portfolio.html">Works</a></li>
+         <li class="lnb">
+             <a href="gallery/gallery.html">Web/App</a></li>
+         <li class="lnb" onclick="pageable.scrollToPage(5)">
+             <a href="/jquery.gallery.html">Design</a></li>
+        </ul>
+     </nav>
+     
+    <div class="container" onclick="pageable.scrollToPage(5)">
+        <div class="title"><h1 class="designtitle">Design</h1></div>
+        <div class="main-box" data-aos="zoom-in">
+            <div class="design-box">
+                <img src="mockup/maincard1.png" alt="img1" class="card">
+            </div>
+            <div class="design-box">
+                <img src="mockup/mainimg2.jpg" alt="img2" class="card">
+            </div>
+            <div class="design-box">
+                <img src="mockup/mainimg3.jpg" alt="img3" class="card">
+            </div>
+            <div class="design-box">
+                <img src="mockup/mainimg4.jpg" alt="img4" class="card">
+            </div>
+        </div>
+</div>
+    <div class="pop">
+        <div class="close">
+            <div class="leftx"></div>
+            <div class="rightx"></div>
+        </div>
+        <div class="popup">
+            <div class="imgcard">
+                <div class="itembox">
+                   <a href="#" class="itemimg"><img src="mockup/chirstmascard2.png" alt="001"></a>
+                   <a href="#" class="itemimg"><img src="mockup/chirstmascard1.png" alt="002"></a>
+                   <a href="#" class="itemimg"><img src="mockup/chirstmascard3.png" alt="003"></a>
+                   <a href="#" class="itemimg"><img src="mockup/camppingmockup.jpg" alt="004"></a>
+                   <a href="#" class="itemimg"><img src="mockup/travelbackgroundimg.jpg" alt="005"></a>
+                   <a href="#" class="itemimg"><img src="mockup/information-technologyimg.jpg" alt="006"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

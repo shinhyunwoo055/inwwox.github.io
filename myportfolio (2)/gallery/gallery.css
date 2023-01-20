@@ -1,0 +1,523 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:auto;
+    background:rgb(27, 27, 27);
+}
+a{
+    list-style: none;
+    text-decoration-line: none;
+}
+nav{
+    width:100%;
+    height:60px;
+    background:#fff;
+    border-bottom:2px solid #cbcbcb;
+    position:fixed;
+    z-index:999;
+}
+.gnb{
+     max-width:1920px;
+     height:100%;
+     overflow:hidden;
+     margin:0 auto;
+}
+.lnb{
+    position:relative;
+    float:left;
+    left:200px;
+    width:200px;
+    height:60px;
+    line-height: 60px;
+    font-size:16px;
+    text-align:center;
+    font-weight:bold;
+    list-style: none;
+    
+}
+.lnb a{
+    text-decoration-line: none;
+    cursor:pointer;
+    color:#000;
+    
+}
+.active { color: red; }
+.bowman{
+    height:500px;
+    background:url(galleryimg/bowman.png) no-repeat fixed;
+    display:flex;
+    margin-bottom:10px;
+    padding-top:40px;
+}
+.gallery-overlay{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.2);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index:999;
+    display:none;
+}
+.contentitembox{
+    position: relative;
+    left: 41%;
+    top: 50%;
+    z-index: 99;
+    margin: -400px 0 0 -450px;
+    width: 1200px;
+    height: 800px;
+    background: #fff;
+    overflow-y: scroll;
+  }
+.contentheader{
+    width:1200px;
+    height:60px;
+    margin-bottom:60px;
+    position:relative;
+    top:10px;
+    left:0;
+}
+.bowmanguidebox{
+    width:1200px;
+    height:8800px;;
+    display:inline-block;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index:9;
+    background:url(galleryimg/bowmanguide.jpg)center no-repeat;
+}
+.closebox{
+    width:40px;
+    height:40px;
+    position:absolute;
+    top:10px;
+    right:40px;
+    z-index:99;
+}
+#close{
+    font-size:40px;
+    color:#cbcbcb;
+    text-align: center;
+    cursor:pointer;
+    transition:all 0.5s ease-in-out;
+    position:fixed;
+}
+#close:hover{
+    color:#000;
+}
+.title{
+    width:50%;
+    height:500px;
+    
+}
+.btnbox{
+    width:50%;
+    height:500px;
+    display:flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.monitorbox{
+    width: 894px;
+    height: 480px;
+    background: url(galleryimg/isolated_realistic_laptop.png) no-repeat center;
+    position: relative;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+.monitorimgbox{
+    width:894px;
+    height:480px;
+    margin-left: auto;
+    margin-right: auto;
+    background:url(galleryimg/isolated_realistic_laptop.png) no-repeat center;
+    position:relative;
+    top:0;
+    left:0;
+    overflow: hidden;
+}
+
+.pagebox{
+    width: 532px;
+    height: 347px;
+    position: absolute;
+    top: 60px;
+    left: 182px;
+    background: #4c4949;
+    overflow: hidden;
+}
+.pageoverlay{
+    width: 532px;
+  height: 347px;
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 60px;
+  left: 182px;
+  z-index: 99;
+}
+.pageoverlaytitle{
+    color:#fff;
+    font-size:20px;
+    font-weight:bold;
+    text-align: center;
+}
+.monitorimgbox:hover .pageoverlay{
+    display:none;
+}
+.bowmanpage{
+    width:532px;
+    height:5200px;
+    background:url(galleryimg/bowmanpage.png) no-repeat center;
+    position:absolute;
+    top:-20px;
+    left:0;
+}
+.monitorimgbox:hover .bowmanpage{
+	transform: translateY(calc(-100% + 370px));
+}
+.pagebox:hover .bowmanpage{
+	transform: translateY(calc(-100% + 370px));
+}
+.pagebox .bowmanpage{
+	transition: transform 10s cubic-bezier(0,0,.58,1);
+    transition-duration: 18s;
+}
+.travelpage{
+    width:534px;
+    height:1200px;
+    background:url(galleryimg/travelpage.png) no-repeat center;
+    position:absolute;
+    top:1px;
+    left:0;
+}
+.monitorimgbox:hover .travelpage{
+	transform: translateY(calc(-100% + 362px));
+}
+.pagebox:hover .travelpage{
+	transform: translateY(calc(-100% + 362px));
+}
+.pagebox .travelpage{
+	transition: transform 2s cubic-bezier(0,0,.58,1);
+}
+.myblogpage{
+    width:532px;
+    height:4000px;
+    background:url(galleryimg/myblogpage.jpg) no-repeat center;
+    position:absolute;
+    top:0px;
+    left:0;
+}
+.monitorimgbox:hover .myblogpage{
+	transform: translateY(calc(-100% + 382px));
+}
+.pagebox:hover .mybloglpage{
+	transform: translateY(calc(-100% + 382px));
+}
+.pagebox .myblogpage{
+	transition: transform 16s cubic-bezier(0,0,.58,1);
+}
+.btn-contentbox{
+    width:556px;
+    height:83px;
+    margin-left:auto;
+    margin-right:auto;
+    position:relative;
+    top:428px;
+
+}
+.btn-contenphonetbox{
+    width:556px;
+    height:83px;
+    margin-left:auto;
+    margin-right:auto;
+    position:relative;
+    top:-65px;
+    left: 70px;
+}
+.btn-itembox{
+    width: 406px;
+    height: 80px;
+    margin-top: -20px;
+    margin-bottom:20px;
+    margin-left: 48px;
+    display:flex;
+    justify-content: space-around;
+}
+.btn-item1{
+    width:160px;
+    height:50px;
+    line-height: 20px;
+    font-weight:bold;
+    font-style: normal;
+    font-size:16px;
+    display: inline-block;
+    border:none;
+    border-radius: 5px;
+    transition: all 0.5s ease-out;
+    background: linear-gradient(270deg, rgba(82, 82, 82, 0.8), rgba(20, 20, 20, 0.8), rgba(34,34,34,0), rgba(34,34,34,0));
+    background:#fff;
+    background-position: 1% 50%;
+    background-size: 300% 300%;
+    text-decoration: none;
+    margin: 0.625rem;
+}
+.btn-item1:hover{
+    background:#5f5f5f;
+}
+.btn-text{
+    font-size:16px;
+    font-family: sans-serif;
+    font-weight:bold;
+    color:#000;
+    line-height: 0.8em;
+    letter-spacing: 1px;
+}
+.btn-item1:hover .btn-text{
+    color: #fff;
+}
+.leftbox{
+   width:520px;
+   height:420px;
+   margin-top:80px;
+   position:relative;
+}
+.bowmanlogo{
+    width: 360px;
+    height: 180px;
+    position: absolute;
+    top: 220px;
+    left: 200px;
+    animation: slide 1s ease-out;
+    z-index: 99;
+    
+}
+.bowman-btn{
+    width:50%;
+    height:600px;
+
+}
+.Travel{
+    height:500px;
+    background:url("galleryimg/travel.png") center no-repeat fixed;
+    display:flex;
+    margin-bottom:10px;
+}
+.rightbox{
+    width:520px;
+    height:400px;
+    margin-top:80px;
+    margin-left:408px;
+    position:relative;
+ }
+.Travellogo{
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    top: 0px;
+    right:200px;
+    animation: slide-right 1s ease-out;
+    z-index: 99;
+ }
+ .Travellogo img{
+    width:300px;
+    height:400px;
+ }
+.myblog{
+    height:500px;
+    background:url("/gallery/galleryimg/myblog.PNG")no-repeat fixed;
+    display:flex;
+    margin-bottom:10px;
+
+}
+.mybloglogo{
+    width: 360px;
+    height: 180px;
+    position: absolute;
+    top: 280px;
+    left: 200px;
+    animation: slide 1s ease-out;
+    z-index: 99;
+
+    
+}
+
+.paran{
+    height:500px;
+    background:url("galleryimg/paran.png") fixed;
+    display:flex;
+    margin-bottom:10px;
+
+}
+.paranlogo{
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    top: 70px;
+    right:200px;
+    animation:slide-right 1s ease-out;
+    z-index: 99;
+
+    
+}
+.phonebox{
+    width:894px;
+    height:480px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:20px;
+    overflow:hidden;
+}
+.phoneimgbox{
+    width:894px;
+    height:480px;
+    margin-left: auto;
+    margin-right: auto;
+    background:url(galleryimg/phone.png) no-repeat center;
+    position:relative;
+    top:0;
+    left:0;
+    overflow: hidden;
+}
+.phonepagebox{
+    width: 212px;
+    height: 370px;
+    position: absolute;
+    top: 56px;
+    left: 382px;
+    overflow: hidden;
+    transition-duration: 3s;
+}
+.phonepagebox img{
+   width:100%;
+}
+.phoneoverlay{
+  width: 207px;
+  height: 367px;
+  background: rgba(0,0,0,0.3);
+  position: absolute;
+  top: 56px;
+  left: 384px;
+  z-index: 99;
+}
+.phoneoverlaytitle{
+    color:#fff;
+    font-size:20px;
+    font-weight:bold;
+    text-align: center;
+    margin-top:80px;
+}
+
+.buildingclean{
+    height:500px;
+    background:url("galleryimg/buildingclean.png") fixed;
+    display:flex;
+    margin-bottom:10px;
+
+}
+.buildingcleanlogo{
+    width: 360px;
+    height: 180px;
+    position: absolute;
+    top: 120px;
+    left: 200px;
+    animation: slide 1s ease-out;
+    z-index: 99;
+
+    
+}
+@keyframes slide {
+    from{
+       left:-200px;
+       opacity: 0;
+
+    }
+    to{
+        left:200px;
+        opacity: 1;
+    }
+}
+@keyframes disappear{
+    from{
+        left:200px;
+        opacity: 1;
+    } 
+    to{
+        left:-100px;
+        opacity: 0;
+    }
+}
+@keyframes slide-right{
+    from{
+       right:-100px;
+       opacity: 0;
+
+    }
+    to{
+        right:200px;
+        opacity: 1;
+    }
+}
+@keyframes disappear-right{
+    from{
+        right:200px;
+        opacity: 1;
+    } 
+    to{
+        right:-200px;
+        opacity: 0;
+    }
+}
+.footer{
+    height:400px;
+    background:#dedddd;
+    
+}
+.container-footer{
+    margin:0;
+    padding:0;
+}
+.footerbox{
+    width:1040px;
+    height:224px;
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+    flex-direction: column;
+    transition:all 0.5 ease-in;
+    cursor:pointer;
+}
+.footer-title{
+    width:1040px;
+    height:112px;
+    margin:110px auto;
+    text-align:center;
+   
+}
+.footer-title p{
+    color:rgb(207, 207, 207);
+}
+.footer-sub{
+    width:1040px;
+    height:112px;
+    margin:0px auto;
+    color:#fff;
+}
+.boldtext{
+    font-weight: bold;
+    color:#fff;
+}
+.footerbox:hover p{
+    color:rgb(129, 129, 240);
+    cursor:pointer;
+}
+.footerbox:hover span{
+    color:rgb(129, 129, 240);
+    cursor:pointer;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/pageable@latest/dist/pageable.min.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <header>
+    <nav>
+        <ul class="gnb">
+        <li class="lnb">
+        <a href="#" class="active" onclick="pageable.scrollToPage(1)">Home</a></li>
+        <li class="lnb">
+        <a href="#" onclick="pageable.scrollToPage(2)">About</a></li>
+        <li class="lnb">
+        <a href="#" onclick="pageable.scrollToPage(3)">Works </a></li>
+        <li class="lnb">
+        <a href="/gallery/gallery.html">Web/App</a></li>
+        <li class="lnb">
+        <a href="jquery.gallery.html">Design</a></li>
+    </ul>
+    </nav>
+    </header>
+    <div class="container">
+        <section data-anchor="Page 1" id="page-1">
+            <h1>Portfolio title</h1>
+        </section>
+        
+        <section data-anchor="Page 2" id="page-2">
+        </section>
+        <section data-anchor="Page 3" id="page-3">
+            <div class="worksbox">
+                <div class="workblcok">
+                    <div class="gallery-box">
+                        <a href="gallery/gallery.html"><h1 class="worktitle">Webpage/Apppage</h1></a>
+                    </div>
+                </div>
+                <div class="workblcok">
+                    <div class="design-box">
+                        <a href="design.html"><h1 class="worktitle">Design</h1></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+   </div>
+
+    <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
+    <script src="portfolio.js"></script>
+</body>
+</html>
